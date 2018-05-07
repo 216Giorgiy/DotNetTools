@@ -281,7 +281,7 @@ namespace Microsoft.DotNet.Watcher.Tools.FunctionalTests
 
         [Theory]
         [InlineData(true)]
-        [InlineData(false)]
+        [InlineData(false, Skip = "This test is flaky due to https://github.com/dotnet/corefx/issues/29547")]
         public void MultipleTriggers(bool usePolling)
         {
             var filesChanged = new HashSet<string>();
